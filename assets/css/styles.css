@@ -111,6 +111,10 @@ nav ul li {
   display: none;
 }
 
+msg {
+  font-family: var(--nav-link-font);
+}
+
 .hero {
   display: flex;
   align-items: center;
@@ -119,16 +123,46 @@ nav ul li {
   max-width: 68.75rem;
   margin: auto;
   margin-top: 50px;
+  white-space: nowrap;
+}
+
+.hero h1 {
+  font-size: 70px;
+  font-family: var(--nav-link-font);
 }
 
 .hero img {
   height: 30rem;
   width: 30rem;
   border-radius: 6px;
+  animation: fadeIn 3s ease-out;
 }
 
+.hero div {
+  font-family: var(--nav-link-font);
+}
+
+.fade-text-from-left {
+  position: relative;
+  white-space: nowrap;
+  animation: fadeIn 6s ease-out, example 3s forwards;
+  font-family: var(--nav-link-font);
+
+}
+
+.fade-text-from-left p {
+  padding-top: 15px;
+  white-space: normal;
+  max-width: 440px;
+}
+
+@keyframes example {
+  from { padding-right: 600px; }
+  to { padding-right: 10px; }
+}
+
+
 .bio {
-  width: 25rem;
   padding: 0.625rem;
   border-radius: 6px;
   background-color: white;
@@ -149,7 +183,9 @@ nav ul li {
   font-weight: var(--bold-font);
   color: var(--primary-color);
   font-style: under;
+  text-align: right;
+  
 }
 .org-link:hover {
-  color: rgb(0, 128, 255);
+  color: var(--secondary-color);
 }
