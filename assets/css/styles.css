@@ -4,18 +4,20 @@
 /* Variables */
 :root {
   --font-family: "Roboto", sans-serf;
-  --hero-body-font: "Open Sans";
-  --nav-link-font: "Noto Sans Mono";
+  --normal-body-font: "Open Sans";
+  --typewriter-font: "Noto Sans Mono";
   --normal-font: 400;
   --semibold-font: 520;
   --bold-font: 700;
   --bolder-font: 900;
   --bg-color: #ccccff;
+  --highlight-color: #B9FAF8;
   --nav-bg-color: white;
   --primary-color: #4756df;
-  --secondary-color: #39bbdf;
-  --primary-shadow: #8b8eaf;
-  --secondary-shadow: #a17a69;
+  --secondary-color: #A663CC;
+  --medium-highlight: #39bbdf;
+  --primary-shadow: #B298DC;
+  --secondary-shadow: #B8D0EB;
   --bottom-margin: 0.5rem;
   --bottom-margin-2: 1rem;
   --line-height: 1.7rem;
@@ -52,12 +54,16 @@ a {
 }
 
 a:hover {
-  color: var(--secondary-color);
+  color: var(--medium-highlight);
 }
 
 body {
   font-family: var(--font-family);
   background-color: var(--bg-color);
+}
+
+.about section {
+  background-color: var(--medium-highlight);
 }
 
 nav {
@@ -70,7 +76,6 @@ nav {
   justify-content: space-between;
   padding: 1.5rem 3.5rem;
   background-color: var(--nav-bg-color);
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 nav h1 {
@@ -79,27 +84,30 @@ nav h1 {
 
 nav a {
   color: var(--primary-color);
-  font-family: var(--nav-link-font);
+  font-family: var(--typewriter-font);
+  font-size: 15px;
   transition: var(--transition);
 }
 nav a:hover {
-  color: var(--secondary-color);
-  border-bottom: 2px solid var(--secondary-color);
+  color: var(--medium-highlight);
+  border-bottom: 2px solid var(--medium-highlight);
 }
 
 nav ul {
   display: flex;
   position: relative;
-  gap: 4rem;
+  gap: 3rem;
+  font-weight: var(--typewriter-font);
+
 }
 
-nav ul li {
-  font-weight: var(--bold-font);
-}
+/* nav ul li {
+} */
 
 .name-heading {
-  font-family: "Open Sans";
+  font-family: var(--typewriter-font);
   font-weight: 700;
+  font-size: 15px;
 }
 
 .burger-menu {
@@ -112,7 +120,7 @@ nav ul li {
 }
 
 msg {
-  font-family: var(--nav-link-font);
+  font-family: var(--typewriter-font);
 }
 
 .hero {
@@ -128,26 +136,78 @@ msg {
 
 .hero h1 {
   font-size: 70px;
-  font-family: var(--nav-link-font);
+  font-family: var(--typewriter-font);
 }
 
-.hero img {
+.hero .hero-img {
   height: 30rem;
-  width: 30rem;
+  /* width: 30rem; */
   border-radius: 6px;
+  animation: fadeIn 3s ease-out;
+  transition: transform .35s;
+
+}
+
+.hero-img:hover {
+  transform: scale(1.1);
+}
+
+
+.hero-social-icons {
+  height: 24px;
+  width: 24px;
+  transition: transform .1s;
   animation: fadeIn 3s ease-out;
 }
 
+.hero-social-icons:hover {
+  transform: scale(1.1);
+}
+
 .hero div {
-  font-family: var(--nav-link-font);
+  font-family: var(--typewriter-font);
+}
+
+.hero-bg {
+  position:absolute;
+  max-width: 1045px;
+  width: 100rem;
+  max-height: 360px;
+  z-index:-1;
+}
+
+.hero-social-links {
+  display: flex;
+  gap: 1rem;
+  padding-top: 20px;
+  animation: fadeIn 3s ease-out;
+}
+
+.wave-animation {
+  max-width: 2rem;
+  max-height: 2rem;
+}
+
+.hero .profession-emojis {
+  max-width: 1.75rem;
+  max-height: 1.75rem;
+  bottom: 0;
 }
 
 .fade-text-from-left {
   position: relative;
   white-space: nowrap;
   animation: fadeIn 6s ease-out, example 3s forwards;
-  font-family: var(--nav-link-font);
+  font-family: var(--typewriter-font);
+}
 
+.fade-text-from-left h3 {
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.fade-text-from-left msg {
+  font-size: 20px;
 }
 
 .fade-text-from-left p {
@@ -166,7 +226,7 @@ msg {
   padding: 0.625rem;
   border-radius: 6px;
   background-color: white;
-  font-family: var(--hero-body-font);
+  font-family: var(--normal-body-font);
   box-shadow: 0px 2px 15px 2px var(--primary-shadow);
 }
 
@@ -187,5 +247,5 @@ msg {
   
 }
 .org-link:hover {
-  color: var(--secondary-color);
+  color: var(--medium-highlight);
 }
