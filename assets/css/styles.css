@@ -11,6 +11,8 @@
   --bold-font: 700;
   --bolder-font: 900;
   --bg-color: #ccccff;
+  --bg-secondary-color: #e7b9f5;
+  --bg-footer-color:#7480be;
   --highlight-color: #B9FAF8;
   --nav-bg-color: white;
   --primary-color: #4756df;
@@ -156,12 +158,15 @@ msg {
 .hero-social-icons {
   height: 24px;
   width: 24px;
+  opacity: 0.7;
+
   transition: transform .1s;
-  animation: fadeIn 3s ease-out;
+
 }
 
 .hero-social-icons:hover {
-  transform: scale(1.1);
+  opacity: 1;
+  transform: scale(1.05);
 }
 
 .hero div {
@@ -193,6 +198,25 @@ msg {
   max-height: 1.75rem;
   bottom: 0;
 }
+
+.more-about {
+  background-color: var(--bg-secondary-color);
+  padding: 3rem 6rem;
+  margin-top: 3.5rem;
+}
+
+.more-about h2 {
+  margin-bottom: var(--bottom-margin);
+  text-align: center;
+  font-family: var(--typewriter-font);
+}
+
+.more-about p {
+  line-height: var(--line-height);
+  padding: 0.4rem;
+  font-family: var(--normal-body-font);
+}
+
 
 .fade-text-from-left {
   position: relative;
@@ -248,4 +272,9 @@ msg {
 }
 .org-link:hover {
   color: var(--medium-highlight);
+}
+
+.footer {
+  background-color: var(--bg-footer-color);
+  padding: 3rem 6rem;
 }
