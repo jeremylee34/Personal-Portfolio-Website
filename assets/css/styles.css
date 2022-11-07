@@ -61,7 +61,7 @@ a:hover {
 
 body {
   font-family: var(--font-family);
-  background-color: var(--bg-color);
+  background-color: white;
 }
 
 .about section {
@@ -78,6 +78,7 @@ nav {
   justify-content: space-between;
   padding: 1.5rem 3.5rem;
   background-color: var(--nav-bg-color);
+  border-bottom: 1px solid rgba(136, 136, 136, 0.212);
 }
 
 nav h1 {
@@ -108,8 +109,8 @@ nav ul {
 
 .name-heading {
   font-family: var(--typewriter-font);
-  font-weight: 700;
-  font-size: 15px;
+  font-weight: 500;
+  font-size: 20px;
 }
 
 .burger-menu {
@@ -127,17 +128,31 @@ msg {
 
 .hero {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 2.5rem;
   max-width: 68.75rem;
   margin: auto;
-  margin-top: 50px;
   white-space: nowrap;
 }
 
+@media (max-width: 800px) {
+  .hero {
+    flex-direction: column;
+  }
+  .hero h1 {
+    font-size: 2vh;
+  }
+
+  .hero-left {
+    padding-left: 3vh;
+  }
+
+}
+
 .hero h1 {
-  font-size: 70px;
+  font-size: 6vh;
   font-family: var(--typewriter-font);
 }
 
