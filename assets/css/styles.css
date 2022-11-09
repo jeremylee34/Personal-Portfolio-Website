@@ -31,6 +31,22 @@ html {
   scroll-behavior: smooth;
 }
 
+@-moz-document url-prefix() { /* Disable scrollbar Firefox */
+  html{
+    scrollbar-width: none;
+  }
+}
+body {
+  margin: 0; /* remove default margin */
+  scrollbar-width: none; /* Also needed to disable scrollbar Firefox */
+  -ms-overflow-style: none;  /* Disable scrollbar IE 10+ */
+  overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* Disable scrollbar Chrome/Safari/Webkit */
+}
+
 /* CSS Resets */
 * {
   margin: 0;
@@ -86,9 +102,9 @@ nav h1 {
 }
 
 nav a {
-  color: var(--primary-color);
+  color: black;
   font-family: var(--typewriter-font);
-  font-size: 15px;
+  font-size: 20px;
   transition: var(--transition);
 }
 nav a:hover {
