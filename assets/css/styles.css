@@ -77,7 +77,7 @@ a:hover {
 
 body {
   font-family: var(--font-family);
-  background-color: white;
+  background: linear-gradient(225deg, rgba(81,105,179,1) 0%, rgba(118,82,170,1) 33%, rgba(192,67,166,1) 94%); 
 }
 
 .about section {
@@ -107,6 +107,7 @@ nav a {
   font-size: 20px;
   transition: var(--transition);
 }
+
 nav a:hover {
   color: var(--medium-highlight);
   border-bottom: 2px solid var(--medium-highlight);
@@ -151,6 +152,7 @@ msg {
   max-width: 68.75rem;
   margin: auto;
   white-space: nowrap;
+  color:black;
 }
 
 @media (max-width: 800px) {
@@ -164,7 +166,14 @@ msg {
   .hero-left {
     padding-left: 3vh;
   }
-
+  .more-about {
+    background-color: var(--bg-secondary-color);
+    padding: 2rem 3rem;
+    margin-top: 3.5rem;
+  }
+  .contact-social-links { 
+    flex-direction: column;
+  }
 }
 
 .hero h1 {
@@ -276,13 +285,14 @@ msg {
   to { padding-right: 10px; }
 }
 
-
 .bio {
   padding: 0.625rem;
-  border-radius: 6px;
+  /* border-radius: 6px; */
   background-color: white;
   font-family: var(--normal-body-font);
-  box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+  box-shadow: 0px 10px 15px 2px var(--primary-shadow);
+  border: 1px solid rgba(136, 136, 136, 0.212);
+  transition: transform .5s;
 }
 
 .bio h1 {
@@ -292,6 +302,10 @@ msg {
 .bio p {
   line-height: var(--line-height);
   padding: 0.3rem 0;
+}
+
+.bio:hover {
+  transform: scale(1.1);
 }
 
 .org-link {
@@ -305,7 +319,33 @@ msg {
   color: var(--medium-highlight);
 }
 
-.footer {
-  background-color: var(--bg-footer-color);
+.contact {
   padding: 3rem 6rem;
+  background: linear-gradient(45deg, rgba(81,105,179,1) 0%, rgba(118,82,170,1) 47%, rgba(192,67,166,1) 94%); 
+}
+
+.contact-social-links {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding-top: 2vh;
+  gap: 2.5vh;
+}
+
+.contact p {
+  display: flex;
+  justify-content: center;
+  color: white;
+  padding-top: 4vh;
+  font-family: var(--normal-body-font);
+}
+
+.contact img {
+  height: 50px;
+  width:  50px;
+  transition: transform .1s;
+}
+
+.contact img:hover {
+  transform: scale(1.1)
 }
