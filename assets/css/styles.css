@@ -181,7 +181,7 @@ msg {
     position: fixed;
     background-color: var(--bg-color);
     flex-direction: column;
-    top: 86px;
+    top: 88px;
     left: 10%;
     width: 80%;
     text-align: center;
@@ -191,6 +191,9 @@ msg {
 
    nav ul li {
     margin: 8px;
+    border: 2px solid rgba(92, 88, 88, 0.267);
+    border-left: none;
+    border-right: none;
   }
   .burger-menu {
     display: block;
@@ -198,6 +201,7 @@ msg {
   nav ul.show {
     transform: translateX(0);
   }
+
 }
 
 .hero h1 {
