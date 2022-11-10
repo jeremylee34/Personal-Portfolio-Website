@@ -4,6 +4,16 @@ const burger = document.querySelector("#burger-menu");
 const ul = document.querySelector("nav ul");
 const nav = document.querySelector("nav");
 
+const circle = document.getElementById('circle');
+const circleStyle = circle.style;
+
+document.addEventListener('mousemove', e => {
+  window.requestAnimationFrame(() => {
+    circleStyle.top = `${ e.clientY - circle.offsetHeight/2 }px`;
+    circleStyle.left = `${ e.clientX - circle.offsetWidth/2 }px`;
+  });
+});
+
 burger.addEventListener("click", () => {
   ul.classList.toggle("show");
 });
@@ -43,3 +53,4 @@ function topFunction() {
 function fade_text() {
   var reveals = document.querySelectorAll(".fade-text-from-left")
 }
+
