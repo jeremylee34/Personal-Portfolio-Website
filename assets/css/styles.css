@@ -14,6 +14,7 @@
   --bg-secondary-color: #e7b9f5;
   --bg-footer-color:#7480be;
   --highlight-color: #B9FAF8;
+  --about-bg-color: #001122;
   --nav-bg-color: white;
   --primary-color: #4756df;
   --secondary-color: #A663CC;
@@ -143,6 +144,18 @@ msg {
   font-family: var(--typewriter-font);
 }
 
+.spacer {
+    aspect-ratio: 1080/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.layer1 {
+  background-image: url('../images/layered-waves-haikei(4).svg');
+}
+
 .hero {
   display: flex;
   flex-direction: row;
@@ -159,9 +172,122 @@ msg {
   height: 30rem;
   width: 30rem;
   border-radius: 6px;
-  animation: fadeIn 3s ease-out;
+  /* animation: fadeIn 3s ease-out; */
   transition: transform .35s;
+  
 
+}
+
+
+.hero h1 {
+  font-size: 6vh;
+  font-family: var(--typewriter-font);
+}
+
+
+.hero-social-icons {
+  height: 24px;
+  width: 24px;
+  opacity: 0.7;
+
+  transition: transform .1s;
+
+}
+
+.hero-p {
+  line-height: 2em;
+}
+
+.more-about {
+  background-color: var(--about-bg-color);
+  color: white;
+  padding: 3rem 6rem;
+}
+
+.more-about h2 {
+  margin-bottom: var(--bottom-margin);
+  text-align: center;
+  font-family: var(--typewriter-font);
+}
+
+.more-about p {
+  line-height: var(--line-height);
+  padding: 0.4rem;
+  font-family: var(--normal-body-font);
+}
+
+
+.fade-text-from-left {
+  position: relative;
+  white-space: nowrap;
+  animation: fadeIn 6s ease-out, example 3s forwards;
+  font-family: var(--typewriter-font);
+}
+
+.fade-text-from-left.active {
+  position: relative;
+  white-space: nowrap;
+  animation: fadeIn 6s ease-out, example 3s forwards;
+  font-family: var(--typewriter-font);
+}
+
+.fade-text-from-left h3 {
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.fade-text-from-left msg {
+  font-size: 20px;
+}
+
+.fade-text-from-left p {
+  padding-top: 15px;
+  white-space: normal;
+  max-width: 500px;
+}
+
+
+
+@media screen and (min-width: 1000px) {
+  .hero h1 {
+    font-size: 8vh;
+  }
+
+  .hero-p {
+    font-size: 2vh;
+  }
+
+  .hero-social-icons {
+    height: 30px;
+    width: 30px;
+    opacity: 0.7;
+  
+    transition: transform .1s;
+  
+  }
+  .fade-text-from-left p {
+    min-width: 500px;
+  }
+  
+}
+
+@media screen and (max-width: 850px) {
+  .hero {
+    margin-top: 1rem;
+    gap: 0;
+  }
+  .hero h1 {
+    font-size: 2vh;
+  }
+
+  .hero .hero-img {
+    height: 23rem;
+  }
+
+
+  .hero-left {
+    padding-left: 10vh;
+  }
 }
 
 @media screen and (max-width: 720px) {
@@ -171,7 +297,7 @@ msg {
     gap: 0;
   }
   .hero h1 {
-    font-size: 2vh;
+    font-size: 5vh;
   }
 
   .hero .hero-img {
@@ -184,10 +310,14 @@ msg {
     padding-left: 3vh;
   }
   .more-about {
-    background-color: var(--bg-secondary-color);
-    padding: 2rem 3rem;
-    margin-top: 3.5rem;
+    padding: 1rem 3.5rem;
+    /* margin-top: 2rem; */
   }
+
+  .more-about p {
+    text-align: justify;
+  }
+
   .contact-social-links { 
     flex-direction: column;
   }
@@ -221,26 +351,42 @@ msg {
 
 }
 
-.hero h1 {
-  font-size: 6vh;
-  font-family: var(--typewriter-font);
+@media screen and (max-width: 450px) {
+  .contact-social-links {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+  }
+
+  .contact img {
+    list-style: none;
+    flex: 0 0 33.333%;
+  }
 }
-
-
 
 .hero-img:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
+  animation: shake 0.5s; 
+  animation-iteration-count: infinite; 
 }
 
 
-.hero-social-icons {
-  height: 24px;
-  width: 24px;
-  opacity: 0.7;
 
-  transition: transform .1s;
-
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
+
+
 
 .hero-social-icons:hover {
   opacity: 1;
@@ -277,46 +423,9 @@ msg {
   bottom: 0;
 }
 
-.more-about {
-  background-color: var(--bg-secondary-color);
-  padding: 3rem 6rem;
-  margin-top: 3.5rem;
-}
-
-.more-about h2 {
-  margin-bottom: var(--bottom-margin);
-  text-align: center;
-  font-family: var(--typewriter-font);
-}
-
-.more-about p {
-  line-height: var(--line-height);
-  padding: 0.4rem;
-  font-family: var(--normal-body-font);
-}
 
 
-.fade-text-from-left {
-  position: relative;
-  white-space: nowrap;
-  animation: fadeIn 6s ease-out, example 3s forwards;
-  font-family: var(--typewriter-font);
-}
 
-.fade-text-from-left h3 {
-  font-size: 15px;
-  white-space: nowrap;
-}
-
-.fade-text-from-left msg {
-  font-size: 20px;
-}
-
-.fade-text-from-left p {
-  padding-top: 15px;
-  white-space: normal;
-  max-width: 440px;
-}
 
 @keyframes example {
   from { padding-right: 600px; }
@@ -381,11 +490,14 @@ msg {
 .contact img {
   height: 50px;
   width:  50px;
-  transition: transform .1s;
+  transition: all .3s ease-out;
 }
 
 .contact img:hover {
-  transform: scale(1.1)
+  transform: scale(1.1);
+  background-color: white; /* Add a dark-grey background on hover */
+  border-radius: 50%;
+
 }
 
 #returnToTop {
