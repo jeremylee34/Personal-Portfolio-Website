@@ -106,6 +106,16 @@ body {
   background-color: var(--medium-highlight);
 }
 
+.nav-logo {
+  max-width: 50px;
+  max-height: 50px;
+  transition: transform 0.3s;
+}
+
+.nav-logo:hover {
+  transform: scale(1.1);
+}
+
 nav {
   position: sticky;
   top: 0;
@@ -124,7 +134,7 @@ nav h1 {
 }
 
 nav a {
-  color: var(--primary-color);
+  color: black;
 
   font-family: var(--typewriter-font);
   font-size: 20px;
@@ -133,7 +143,7 @@ nav a {
 
 nav a:hover {
   color: var(--medium-highlight);
-  border-bottom: 2px solid var(--medium-highlight);
+  /* border-bottom: 2px solid var(--medium-highlight); */
 }
 
 nav ul {
@@ -538,11 +548,11 @@ msg {
   cursor: pointer; /* Add a mouse pointer on hover */
   height: 7vh;
   width: 7vh;
-  background-color: none;
+  background-color: white; /* Add a dark-grey background on hover */
+  border-radius: 50%;
 }
 
 #returnToTop:hover {
-  background-color: white; /* Add a dark-grey background on hover */
-  border-radius: 50%;
+
   transform:  scale(1.1);
 } 
