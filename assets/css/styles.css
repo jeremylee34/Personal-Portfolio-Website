@@ -155,13 +155,30 @@ msg {
   color:black;
 }
 
+.hero .hero-img {
+  height: 30rem;
+  width: 30rem;
+  border-radius: 6px;
+  animation: fadeIn 3s ease-out;
+  transition: transform .35s;
+
+}
+
 @media screen and (max-width: 720px) {
   .hero {
     flex-direction: column;
+    margin-top: 1rem;
+    gap: 0;
   }
   .hero h1 {
     font-size: 2vh;
   }
+
+  .hero .hero-img {
+    height: 25rem;
+    width: 25rem;
+  }
+
 
   .hero-left {
     padding-left: 3vh;
@@ -209,14 +226,7 @@ msg {
   font-family: var(--typewriter-font);
 }
 
-.hero .hero-img {
-  height: 30rem;
-  /* width: 30rem; */
-  border-radius: 6px;
-  animation: fadeIn 3s ease-out;
-  transition: transform .35s;
 
-}
 
 .hero-img:hover {
   transform: scale(1.1);
