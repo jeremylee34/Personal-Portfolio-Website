@@ -277,7 +277,17 @@ msg {
   max-width: 500px;
 }
 
+.bookshelf-bg {
+  background-color: #041b33;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 
+}
+
+.bookshelf img {
+  max-width: 33.33vw;
+}
 
 @media screen and (min-width: 1000px) {
 
@@ -384,6 +394,13 @@ msg {
   }
   nav ul.show {
     transform: translateX(0);
+  }
+
+  .bookshelf-bg {
+    flex-direction: column;
+  }
+  .bookshelf img {
+    max-width: 100vw;
   }
 
 }
