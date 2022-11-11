@@ -33,7 +33,7 @@
 html {
   scroll-behavior: smooth;
   cursor: none;
-
+  scroll-padding-top: 20vh;
 }
 
 @-moz-document url-prefix() { /* Disable scrollbar Firefox */
@@ -64,6 +64,7 @@ body::-webkit-scrollbar {
   width: 25px;
   height: 25px;
   background-color: var(--bg-secondary-color);
+  box-shadow: 0 0 0 1px rgba(136, 136, 136, 0.918);
   border-radius: 50%;
   pointer-events: none;
   transition: background ease-in 10ms, box-shadow ease-in 150ms, transform ease-in 150ms;
@@ -189,6 +190,14 @@ msg {
   background-image: url('../images/layered-waves-haikei(4) 2.svg');
 }
 
+.layer2 {
+  background-image: url('../images/wave-divider-about.svg');
+}
+
+.layer3 {
+  background-image: url('../images/wave-divider-bookshelf.svg');
+}
+
 .hero {
   display: flex;
   flex-direction: row;
@@ -256,7 +265,7 @@ msg {
 .more-about {
   background-color: var(--about-bg-color);
   color: white;
-  padding: 0 3rem 6rem;
+  padding: 2rem 3rem 3rem;
 }
 
 .more-about h2 {
@@ -298,7 +307,11 @@ msg {
 .fade-text-from-left p {
   padding-top: 15px;
   white-space: normal;
-  max-width: 500px;
+  max-width: 520px;
+}
+
+.projects {
+  background: #e7b9f5;
 }
 
 .bookshelf-bg {
@@ -366,6 +379,16 @@ msg {
 }
 
 @media screen and (max-width: 720px) {
+
+  html {
+    scroll-padding-top: 15vh;
+    cursor: pointer;
+  }
+
+  #circle {
+    display: none;
+  }
+
   .hero {
     flex-direction: column;
     margin-top: 1rem;
@@ -391,7 +414,8 @@ msg {
   }
 
   .more-about {
-    padding: 1rem 3.5rem;
+    /* padding: 1rem 3.5rem; */
+    padding: 2rem 2rem 2rem;
     /* margin-top: 2rem; */
   }
 
