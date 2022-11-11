@@ -231,6 +231,28 @@ msg {
   line-height: 2em;
 }
 
+.not-found {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+
+}
+
+.not-found h1 {
+  font-family: var(--glitch-font);
+  font-size: 10vh;
+  max-width: 30vw;
+  color: white;
+}
+
+.body-404 {
+  background: linear-gradient(45deg, rgba(81,105,179,1) 0%, rgba(118,82,170,1) 47%, rgba(192,67,166,1) 94%); 
+
+
+}
+
 .more-about {
   background-color: var(--about-bg-color);
   color: white;
@@ -337,6 +359,10 @@ msg {
   .hero-left {
     padding-left: 10vh;
   }
+  .not-found {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
 }
 
 @media screen and (max-width: 720px) {
@@ -358,6 +384,12 @@ msg {
   .hero-left {
     padding-left: 3vh;
   }
+
+  .not-found {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
   .more-about {
     padding: 1rem 3.5rem;
     /* margin-top: 2rem; */
@@ -527,6 +559,34 @@ msg {
   background: linear-gradient(45deg, rgba(81,105,179,1) 0%, rgba(118,82,170,1) 47%, rgba(192,67,166,1) 94%); 
 }
 
+.contact-404 {
+  padding: 3rem 6rem;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  
+}
+
+.contact-404 p {
+  display: flex;
+  justify-content: center;
+  color: white;
+  padding-top: 4vh;
+  font-family: var(--normal-body-font);
+}
+
+.contact-404 img {
+  height: 50px;
+  width:  50px;
+  transition: all .3s ease-out;
+  filter: invert(100%);
+
+}
+
 .contact-social-links {
   display: flex;
   justify-content: center;
@@ -547,6 +607,8 @@ msg {
   height: 50px;
   width:  50px;
   transition: all .3s ease-out;
+  filter: invert(100%);
+
 }
 
 .contact img:hover {
@@ -555,21 +617,6 @@ msg {
   border-radius: 50%;
 }
 
-.not-found {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(45deg, rgba(81,105,179,1) 0%, rgba(118,82,170,1) 47%, rgba(192,67,166,1) 94%); 
-
-}
-
-.not-found h1 {
-  font-family: var(--glitch-font);
-  font-size: 10vh;
-  max-width: 30vw;
-  color: white;
-}
 
 
 #returnToTop {
