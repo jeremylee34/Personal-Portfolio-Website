@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Noto%20Sans%20Mono");
 @import url("https://fonts.googleapis.com/css?family=Open%20Sans");
+@import url("https://fonts.googleapis.com/css?family=Rubik%20Glitch");
 /* Variables */
 :root {
   --font-family: "Roboto", sans-serf;
   --normal-body-font: "Open Sans";
   --typewriter-font: "Noto Sans Mono";
+  --glitch-font: "Rubik Glitch";
   --normal-font: 400;
   --semibold-font: 520;
   --bold-font: 700;
@@ -196,7 +198,7 @@ msg {
   max-width: 68.75rem;
   margin: auto;
   white-space: nowrap;
-  color:black;
+  color:white;
 }
 
 .hero .hero-img {
@@ -219,8 +221,8 @@ msg {
 .hero-social-icons {
   height: 24px;
   width: 24px;
-  opacity: 0.7;
-
+  /* opacity: 0.7; */
+  filter: invert(100%);
   transition: transform .1s;
 
 }
@@ -307,7 +309,7 @@ msg {
   .hero-social-icons {
     height: 30px;
     width: 30px;
-    opacity: 0.7;
+    /* opacity: 0.7; */
   
     transition: transform .1s;
   
@@ -443,7 +445,7 @@ msg {
 
 
 .hero-social-icons:hover {
-  opacity: 1;
+  /* opacity: 1; */
   transform: scale(1.05);
 }
 
@@ -551,8 +553,24 @@ msg {
   transform: scale(1.1);
   background-color: white; /* Add a dark-grey background on hover */
   border-radius: 50%;
+}
+
+.not-found {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, rgba(81,105,179,1) 0%, rgba(118,82,170,1) 47%, rgba(192,67,166,1) 94%); 
 
 }
+
+.not-found h1 {
+  font-family: var(--glitch-font);
+  font-size: 10vh;
+  max-width: 30vw;
+  color: white;
+}
+
 
 #returnToTop {
   display: none; /* Hidden by default */
