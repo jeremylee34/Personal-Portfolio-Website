@@ -78,9 +78,9 @@ body::-webkit-scrollbar {
   box-sizing: border-box;
 }
 
-ul {
+/* ul {
   list-style-type: none;
-}
+} */
 
 .dot-points {
   list-style-type: disc;
@@ -96,13 +96,19 @@ a {
 }
 
 a:hover {
-  color: var(--medium-highlight);
+  cursor: none;
 }
+
+/* a:hover {
+  color: var(--medium-highlight);
+} */
 
 body {
   font-family: var(--font-family);
   /* background: linear-gradient(225deg, rgba(81,105,179,1) 0%, rgba(118,82,170,1) 33%, rgba(192,67,166,1) 94%);  */
-  background-color: #7652aa;
+  /* background-color: #7652aa; */
+  background: rgb(78,214,187);
+  background: linear-gradient(180deg, rgba(78,214,187,1) 0%, rgba(82,143,170,1) 10%, rgba(118,82,170,1) 21%); 
 }
 
 .about section {
@@ -113,10 +119,13 @@ body {
   max-width: 50px;
   max-height: 50px;
   transition: transform 0.3s;
+  filter: invert(100%);
+  
 }
 
 .nav-logo:hover {
   transform: scale(1.1);
+
 }
 
 nav {
@@ -128,8 +137,11 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem 3.5rem;
-  background-color: var(--nav-bg-color);
-  /* border-bottom: 1px solid rgba(136, 136, 136, 0.212); */
+  /* background-color: var(--nav-bg-color); */
+  /* background-color: rgba(0, 0, 0, 0.075); */
+  box-shadow: 10px 10px 5px rgba(2, 2, 2, 0.041);
+  backdrop-filter: blur(4px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.308);
 }
 
 nav h1 {
@@ -137,18 +149,12 @@ nav h1 {
 }
 
 nav a {
-  color: black;
+  color: white;
 
   font-family: var(--typewriter-font);
   font-size: 20px;
-  transition: var(--transition);
 }
 
-nav a:hover {
-  color: var(--medium-highlight);
-  cursor: none;
-  /* border-bottom: 2px solid var(--medium-highlight); */
-}
 
 nav ul {
   display: flex;
@@ -156,6 +162,33 @@ nav ul {
   gap: 3rem;
   font-weight: var(--typewriter-font);
 }
+
+.nav-link {
+  list-style-type: none;
+  position: relative;
+}
+
+
+
+.nav-link:after {
+  content: '';
+  height: 2px;
+  width: 0px;
+  background: white;
+  position: absolute;
+  bottom: -5px;
+  right: 0%;
+  transition: .3s;
+}
+
+.nav-link:hover:after {
+  /* color: var(--medium-highlight); */
+  cursor: none;
+  width: 100%;
+  left: 0%;
+}
+
+
 
 /* nav ul li {
 } */
@@ -167,7 +200,8 @@ nav ul {
 }
 
 .burger-menu {
-  color: var(--primary-color);
+  /* color: var(--primary-color); */
+  color: white;
   font-size: 2rem;
   border: 0;
   background-color: transparent;
@@ -525,6 +559,11 @@ msg {
   gap: 1rem;
   padding-top: 20px;
   animation: fadeIn 3s ease-out;
+}
+
+.hero-social-links:hover {
+  cursor: none;
+
 }
 
 .wave-animation {
