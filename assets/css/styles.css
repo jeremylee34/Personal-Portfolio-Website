@@ -74,15 +74,19 @@ body::-webkit-scrollbar {
 #returnToTop {
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
-  bottom: 10vh; /* Place the button at the bottom of the page */
+  bottom: 0vh; /* Place the button at the bottom of the page */
   right: 7vh; /* Place the button 30px from the right */
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
   cursor: pointer; /* Add a mouse pointer on hover */
-  height: 7vh;
-  width: 7vh;
+  height: 8.5vh;
+  width: 8.5vh;
+  animation: return-button 0.4s forwards;
+
 }
+
+
 
 #returnToTop:hover {
   cursor: none;
@@ -342,12 +346,12 @@ msg {
   font-family: var(--typewriter-font);
 }
 
-.fade-text-from-left.active {
+/* .fade-text-from-left.active {
   position: relative;
   white-space: nowrap;
   animation: fadeIn 6s ease-out, example 3s forwards;
   font-family: var(--typewriter-font);
-}
+} */
 
 .fade-text-from-left h3 {
   font-size: 15px;
@@ -422,6 +426,9 @@ msg {
     height: 23rem;
   }
 
+  #circle {
+    display: none;
+  }
 
   .hero-left {
     padding-left: 10vh;
@@ -602,7 +609,10 @@ msg {
 
 
 
-
+@keyframes return-button {
+  from { bottom: 0vh; }
+  to { bottom: 10vh; }
+}
 
 @keyframes example {
   from { padding-right: 600px; }
