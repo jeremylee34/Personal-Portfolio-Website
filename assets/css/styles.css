@@ -542,7 +542,6 @@ msg {
 }
 
 .hero-img:hover {
-  transform: scale(1.2);
   animation: shake 0.5s; 
   animation-iteration-count: infinite; 
 }
