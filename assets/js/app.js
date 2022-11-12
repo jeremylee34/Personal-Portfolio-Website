@@ -50,7 +50,7 @@ function topFunction() {
 } 
 
 
-function fade_text() {
-  var reveals = document.querySelectorAll(".fade-text-from-left")
-}
+// function fade_text() {
+//   var reveals = document.querySelectorAll(".fade-text-from-left")
+// }
 
