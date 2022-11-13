@@ -512,6 +512,9 @@ msg {
     text-align: center;
     transform: translateX(120%);
     border-radius: 10px 5px 10px 5px;
+    box-shadow: 0px 5px 10px rgba(2, 2, 2, 0.288);
+    
+    
   }
 
   nav a {
