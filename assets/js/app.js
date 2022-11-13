@@ -16,6 +16,8 @@ document.addEventListener('mousemove', e => {
 
 burger.addEventListener("click", () => {
   ul.classList.toggle("show");
+
+  // burger.style['background-color'] = burger.style['background-color'] = 'transparent' ? 'white' : 'transparent';
 });
 
 // Close hamburger menu when a link is clicked
