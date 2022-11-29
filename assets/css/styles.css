@@ -2,11 +2,13 @@
 @import url("https://fonts.googleapis.com/css?family=Noto%20Sans%20Mono");
 @import url("https://fonts.googleapis.com/css?family=Open%20Sans");
 @import url("https://fonts.googleapis.com/css?family=Rubik%20Glitch");
+@import url("https://fonts.googleapis.com/css?family=Inter");
 /* Variables */
 :root {
   --font-family: "Roboto", sans-serf;
   --normal-body-font: "Open Sans";
-  --typewriter-font: "Noto Sans Mono";
+  /* --typewriter-font: "Noto Sans Mono"; */
+  --typewriter-font: "Inter";
   --glitch-font: "Rubik Glitch";
   --normal-font: 400;
   --semibold-font: 520;
@@ -32,7 +34,7 @@
 
 html {
   scroll-behavior: smooth;
-  cursor: none;
+  /* cursor: none; */
   scroll-padding-top: 20vh;
 }
 
@@ -273,6 +275,7 @@ msg {
   margin: auto;
   white-space: nowrap;
   color:white;
+  z-index: 1;
 }
 
 .hero .hero-img {
@@ -305,6 +308,178 @@ msg {
   line-height: 2em;
 }
 
+
+
+.hero-circle-bg {
+  position: absolute;
+  max-width: 68.75rem;
+
+  z-index: -1;
+  top: 0;
+  padding-top: 15vh;
+  height: 70vh;
+  left: 10vw;
+}
+
+.hero-circle-1 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  animation: circle-1 2s forwards;
+
+}
+
+.hero-circle-2 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 18vh;
+  background-color: #4ED6BB;
+  border-radius: 50%;
+  animation: circle-2 2s forwards;
+
+}
+
+.hero-circle-3 {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 23vh;
+  background-color: #AE95CB;
+  border-radius: 50%;
+  animation: circle-3 2s forwards;
+}
+
+
+.hero-circle-4 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 27vh;
+  background-color: #4ED6BB;
+  border-radius: 50%;
+  animation: circle-4 2s forwards;
+}
+
+.hero-circle-5 {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 36vh;
+  background-color: #AE95CB;
+  border-radius: 50%;
+  animation: circle-5 2s forwards;
+
+}
+
+.hero-circle-6 {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 38vh;
+  background-color: #AE95CB;
+  border-radius: 50%;
+  animation: circle-6 2s forwards;
+}
+
+.hero-circle-7 {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 51vh;
+  background-color: #4ED6BB;
+  border-radius: 50%;
+  animation: circle-7 2s forwards;
+}
+
+.hero-circle-8 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 63vh;
+  background-color: #4ED6BB;
+  border-radius: 50%;
+  animation: circle-8 2s forwards;
+
+}
+
+.hero-circle-9 {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  top: 64vh;
+  background-color: #E7B9F5;
+  border-radius: 50%;
+  animation: circle-9 2s forwards;
+
+}
+
+.hero-circle-10 {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  top: 68vh;
+  background-color: #E7B9F5;
+  border-radius: 50%;
+  animation: circle-10 2s forwards;
+
+}
+
+
+@keyframes circle-1{
+  from { left: -30vw; }
+  to { left: 66vw; }
+}
+
+@keyframes circle-2 {
+  from { right: -100vw; }
+  to { right: -17vw; }
+}
+
+@keyframes circle-3 {
+  from { right: -100vw; }
+  to { right: -29vw; }
+}
+
+@keyframes circle-4 {
+  from { left: -30vw; }
+  to { left: 45vw; }
+}
+
+@keyframes circle-5 {
+  from { right: -100vw; }
+  to { right: -11vw; }
+}
+
+@keyframes circle-6 {
+  from { left: -30vw; }
+  to { left: 64vw; }
+}
+
+@keyframes circle-7 {
+  from { left: -30vw; }
+  to { left: 70vw; }
+}
+
+@keyframes circle-8 {
+  from { right: -100vw; }
+  to { right: -25vw; }
+}
+
+@keyframes circle-9 {
+  from { right: -100vw; }
+  to { right: -13vw; }
+}
+
+@keyframes circle-10 {
+  from { left: -30vw; }
+  to { left: 60vw; }
+}
+
+
+
 .not-found {
   display: flex;
   flex-direction: row;
@@ -313,6 +488,7 @@ msg {
   padding: 3rem;
 
 }
+
 
 .not-found h1 {
   font-family: var(--glitch-font);
