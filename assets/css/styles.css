@@ -112,7 +112,7 @@ body::-webkit-scrollbar {
   position: relative;
   padding-left: 2rem;
   margin: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
 }
 
 a {
@@ -512,15 +512,53 @@ msg {
 .more-about h2 {
   margin-bottom: var(--bottom-margin);
   text-align: center;
+  font-weight: bold;
   font-family: var(--typewriter-font);
+  font-size: 30px;
 }
 
 .more-about p {
   line-height: var(--line-height);
   padding: 0.4rem;
-  font-family: var(--normal-body-font);
+  font-family: var(--typewriter-font);
+  font-size: 20px;
 }
 
+.about-container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  margin: auto;
+  justify-content: center;
+}
+
+.about-bio {
+  width: 40rem;
+  padding-right: 3vw;
+}
+
+.about-dot {
+  font-size: 20px;
+  line-height: var(--line-height);
+}
+
+.about-org-logos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+
+}
+
+.about-org-logos img {
+  height: 85px;
+  width: 85px;  
+}
+
+.about-pic {
+  padding-left: 3vw;
+}
 
 .fade-text-from-left {
   position: relative;
@@ -841,9 +879,12 @@ msg {
 
 .org-link {
   font-weight: var(--bold-font);
-  color: var(--primary-color);
+  /* color: var(--primary-color); */
+  color: white;
   font-style: under;
   text-align: right;
+  font-family: var(--typewriter-font);
+  font-size: 20px;
   
 }
 .org-link:hover {
