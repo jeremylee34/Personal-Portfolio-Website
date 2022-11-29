@@ -560,6 +560,23 @@ msg {
   padding-left: 3vw;
 }
 
+.org-link {
+  font-weight: var(--bold-font);
+  /* color: var(--primary-color); */
+  color: white;
+  font-style: under;
+  text-align: right;
+  font-family: var(--typewriter-font);
+  font-size: 20px;
+  
+}
+.org-link:hover {
+  color: var(--medium-highlight);
+}
+
+
+
+
 .fade-text-from-left {
   position: relative;
   white-space: nowrap;
@@ -586,7 +603,7 @@ msg {
 .fade-text-from-left p {
   padding-top: 15px;
   white-space: normal;
-  max-width: 520px;
+  max-width: 500px;
 }
 
 .projects {
@@ -703,6 +720,47 @@ msg {
 
   .more-about p {
     text-align: justify;
+  }
+
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-bio {
+    width: 90vw;
+  }
+
+  .more-about p {
+    font-size: 17px;
+    text-align: left;
+  }
+
+  .about-org-logos {
+    flex-direction: row;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  
+  .about-org-logos img {
+    height: 70px;
+    width: 70px;
+  
+  }
+
+  .org-link {
+    font-size: 17px;
+
+  }
+
+  .about-pic {
+    padding-left: 0;
+    padding-top: 15px;
+  }
+
+  .about-pic img {
+    max-width: 85vw;
   }
 
   .contact-social-links { 
@@ -877,19 +935,6 @@ msg {
   transform: scale(1.1);
 }
 
-.org-link {
-  font-weight: var(--bold-font);
-  /* color: var(--primary-color); */
-  color: white;
-  font-style: under;
-  text-align: right;
-  font-family: var(--typewriter-font);
-  font-size: 20px;
-  
-}
-.org-link:hover {
-  color: var(--medium-highlight);
-}
 
 .contact {
   padding: 3rem 6rem;
